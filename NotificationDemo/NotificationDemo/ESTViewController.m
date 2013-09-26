@@ -34,7 +34,7 @@
     
     // create sample region with major value defined
     ESTBeaconRegion* region = [[ESTBeaconRegion alloc] initRegionWithMajor:222
-                                                                identifier:@"EstioteSampleRegion"];
+                                                                identifier:@"EstimoteSampleRegion"];
     
     // start looking for estimtoe beacons in region
     // when beacon ranged beaconManager:didEnterRegion:

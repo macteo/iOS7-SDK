@@ -10,4 +10,6 @@
 
 @interface ESTViewController : UIViewController
 
+@property (nonatomic, strong) IBOutlet UILabel* distanceLabel;
+
 @end

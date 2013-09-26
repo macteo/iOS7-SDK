@@ -38,7 +38,7 @@
     self.beaconManager.avoidUnknownStateBeacons = YES;
     
     // create sample region object (you can additionaly pass major / minor values)
-    ESTBeaconRegion* region = [[ESTBeaconRegion alloc] initRegionWithIdentifier:@"EstioteSampleRegion"];
+    ESTBeaconRegion* region = [[ESTBeaconRegion alloc] initRegionWithIdentifier:@"EstimoteSampleRegion"];
     
     // start looking for estimtoe beacons in region
     // when beacon ranged beaconManager:didRangeBeacons:inRegion: invoked
@@ -92,7 +92,7 @@
         closestBeacon = [beacons objectAtIndex:0];
         
         // calculate and set new y position
-        float newYPos = self.dotMinPos + (closestBeacon.ibeacon.rssi / -100) * self.dotRange;
+        float newYPos = self.dotMinPos + ((float)closestBeacon.ibeacon.rssi / -100.) * self.dotRange;
         self.positionDot.center = CGPointMake(self.view.bounds.size.width / 2, newYPos);
     }
 }
