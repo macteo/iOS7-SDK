@@ -90,12 +90,11 @@
         // beacon array is sorted based on distance
         // closest beacon is the first one
         closestBeacon = [beacons objectAtIndex:0];
+        
+        // calculate and set new y position
+        float newYPos = self.dotMinPos + (closestBeacon.ibeacon.rssi / -100) * self.dotRange;
+        self.positionDot.center = CGPointMake(self.view.bounds.size.width / 2, newYPos);
     }
-    
-    
-    // calculate and set new y position
-    float newYPos = self.dotMinPos + (closestBeacon.ibeacon.rssi / -100) * self.dotRange;
-    self.positionDot.center = CGPointMake(self.view.bounds.size.width / 2, newYPos);
 }
 
 
