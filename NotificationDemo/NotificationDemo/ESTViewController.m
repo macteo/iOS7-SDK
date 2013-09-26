@@ -33,36 +33,58 @@
     self.beaconManager.avoidUnknownStateBeacons = YES;
     
     // create sample region with major value defined
-    ESTBeaconRegion* region = [[ESTBeaconRegion alloc] initRegionWithMajor:222
-                                                                identifier:@"EstimoteSampleRegion"];
+    ESTBeaconRegion* region = [[ESTBeaconRegion alloc] initRegionWithIdentifier:@"EstimoteSampleRegion"];
     
     // start looking for estimtoe beacons in region
     // when beacon ranged beaconManager:didEnterRegion:
     // and beaconManager:didExitRegion: invoked
     [self.beaconManager startMonitoringForRegion:region];
     
+    [self.beaconManager requestStateForRegion:region];
     
     /////////////////////////////////////////////////////////////
     // setup view
     
     // background
     
+    self.productImage = [[UIImageView alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     [self setProductImage];
     [self.view addSubview:self.productImage];
+}
+
+-(void)beaconManager:(ESTBeaconManager *)manager
+   didDetermineState:(CLRegionState)state
+           forRegion:(ESTBeaconRegion *)region
+{
+    if(state == CLRegionStateInside)
+    {
+        [self setProductImage];
+    }
+    else
+    {
+        [self setDiscountImage];
+    }
 }
 
 -(void)beaconManager:(ESTBeaconManager *)manager
       didEnterRegion:(ESTBeaconRegion *)region
 {
     // iPhone/iPad entered beacon zone
-    [self setDiscountImage];
+    [self setProductImage];
 }
 
 -(void)beaconManager:(ESTBeaconManager *)manager
        didExitRegion:(ESTBeaconRegion *)region
 {
     // iPhone/iPad left beacon zone
-    [self setProductImage];
+    [self setDiscountImage];
+    
+    // present local notification
+    UILocalNotification *notification = [[UILocalNotification alloc] init];
+    notification.alertBody = @"The shoes you'd tried on are now 20%% off for you with this coupon";
+    notification.soundName = UILocalNotificationDefaultSoundName;
+    
+    [[UIApplication sharedApplication] presentLocalNotificationNow:notification];
 }
 
 -(void)setProductImage
@@ -74,11 +96,11 @@
     
     if (screenHeight > 480)
     {
-        self.productImage = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"beforeNotificationBig"]];
+        [self.productImage setImage:[UIImage imageNamed:@"beforeNotificationBig"]];
     }
     else
     {
-        self.productImage = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"beforeNotificationSmall"]];
+        [self.productImage setImage:[UIImage imageNamed:@"beforeNotificationSmall"]];
     }
 }
 
@@ -92,11 +114,11 @@
     
     if (screenHeight > 480)
     {
-        self.productImage = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"afterNotificationBig"]];
+        [self.productImage setImage:[UIImage imageNamed:@"afterNotificationBig"]];
     }
     else
     {
-        self.productImage = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"afterNotificationSmall"]];
+        [self.productImage setImage:[UIImage imageNamed:@"afterNotificationSmall"]];
     }
 }
 
