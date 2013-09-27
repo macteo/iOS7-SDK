@@ -1,0 +1,1054 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="html/html; charset=utf-8" />
+		<title>ESTBeacon Class Reference</title>
+		<meta id="xcode-display" name="xcode-display" content="render"/>
+		<link rel="stylesheet" type="text/css" href="../css/styles.css" media="all" />
+		<link rel="stylesheet" type="text/css" media="print" href="../css/stylesPrint.css" />
+		<meta name="generator" content="appledoc 2.2 (build 961)" />
+	</head>
+	<body>
+		<header id="top_header">
+			<div id="library" class="hideInXcode">
+				<h1><a id="libraryTitle" href="../index.html">EstimoteSDK </a></h1>
+				<a id="developerHome" href="../index.html">Estimote</a>
+			</div>
+			
+			<div id="title" role="banner">
+				<h1 class="hideInXcode">ESTBeacon Class Reference</h1>
+			</div>
+			<ul id="headerButtons" role="toolbar">
+				<li id="toc_button">
+					<button aria-label="Show Table of Contents" role="checkbox" class="open" id="table_of_contents"><span class="disclosure"></span>Table of Contents</button>
+				</li>
+				<li id="jumpto_button" role="navigation">
+					<select id="jumpTo">
+	<option value="top">Jump To&#133;</option>
+	
+	<option value="overview">Overview</option>
+	
+	
+	
+	
+	<option value="tasks">Tasks</option>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<option value="instance_methods">Instance Methods</option>
+	
+	<option value="//api/name/connectToBeacon">&nbsp;&nbsp;&nbsp;&nbsp;- connectToBeacon</option>
+	
+	<option value="//api/name/disconnectBeacon">&nbsp;&nbsp;&nbsp;&nbsp;- disconnectBeacon</option>
+	
+	<option value="//api/name/readBeaconBatteryWithCompletition:">&nbsp;&nbsp;&nbsp;&nbsp;- readBeaconBatteryWithCompletition:</option>
+	
+	<option value="//api/name/readBeaconFirmwareVersionWithCompletition:">&nbsp;&nbsp;&nbsp;&nbsp;- readBeaconFirmwareVersionWithCompletition:</option>
+	
+	<option value="//api/name/readBeaconFrequencyWithCompletition:">&nbsp;&nbsp;&nbsp;&nbsp;- readBeaconFrequencyWithCompletition:</option>
+	
+	<option value="//api/name/readBeaconHardwareVersionWithCompletition:">&nbsp;&nbsp;&nbsp;&nbsp;- readBeaconHardwareVersionWithCompletition:</option>
+	
+	<option value="//api/name/readBeaconMajorWithCompletition:">&nbsp;&nbsp;&nbsp;&nbsp;- readBeaconMajorWithCompletition:</option>
+	
+	<option value="//api/name/readBeaconMinorWithCompletition:">&nbsp;&nbsp;&nbsp;&nbsp;- readBeaconMinorWithCompletition:</option>
+	
+	<option value="//api/name/readBeaconPowerWithCompletition:">&nbsp;&nbsp;&nbsp;&nbsp;- readBeaconPowerWithCompletition:</option>
+	
+	<option value="//api/name/writeBeaconFrequency:withCompletition:">&nbsp;&nbsp;&nbsp;&nbsp;- writeBeaconFrequency:withCompletition:</option>
+	
+	<option value="//api/name/writeBeaconMajor:withCompletition:">&nbsp;&nbsp;&nbsp;&nbsp;- writeBeaconMajor:withCompletition:</option>
+	
+	<option value="//api/name/writeBeaconMinor:withCompletition:">&nbsp;&nbsp;&nbsp;&nbsp;- writeBeaconMinor:withCompletition:</option>
+	
+	<option value="//api/name/writeBeaconPower:withCompletition:">&nbsp;&nbsp;&nbsp;&nbsp;- writeBeaconPower:withCompletition:</option>
+	
+	
+	
+</select>
+				</li>
+			</ul>
+		</header>
+		<nav id="tocContainer" class="isShowingTOC">
+			<ul id="toc" role="tree">
+				
+<li role="treeitem"><span class="nodisclosure"></span><span class="sectionName"><a href="#overview">Overview</a></span></li>
+
+
+
+
+<li role="treeitem" id="task_treeitem"><span class="nodisclosure"></span><span class="sectionName"><a href="#tasks">Tasks</a></span><ul>
+	
+</ul></li>
+
+
+
+
+
+
+
+
+
+<li role="treeitem" class="children"><span class="disclosure"></span><span class="sectionName"><a href="#instance_methods">Instance Methods</a></span><ul>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/connectToBeacon">connectToBeacon</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/disconnectBeacon">disconnectBeacon</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/readBeaconBatteryWithCompletition:">readBeaconBatteryWithCompletition:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/readBeaconFirmwareVersionWithCompletition:">readBeaconFirmwareVersionWithCompletition:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/readBeaconFrequencyWithCompletition:">readBeaconFrequencyWithCompletition:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/readBeaconHardwareVersionWithCompletition:">readBeaconHardwareVersionWithCompletition:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/readBeaconMajorWithCompletition:">readBeaconMajorWithCompletition:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/readBeaconMinorWithCompletition:">readBeaconMinorWithCompletition:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/readBeaconPowerWithCompletition:">readBeaconPowerWithCompletition:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/writeBeaconFrequency:withCompletition:">writeBeaconFrequency:withCompletition:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/writeBeaconMajor:withCompletition:">writeBeaconMajor:withCompletition:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/writeBeaconMinor:withCompletition:">writeBeaconMinor:withCompletition:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/writeBeaconPower:withCompletition:">writeBeaconPower:withCompletition:</a></span></li>
+	
+</ul></li>
+
+
+			</ul>
+		</nav>
+		<article>
+			<div id="contents" class="isShowingTOC" role="main">
+				<a title="ESTBeacon Class Reference" name="top"></a>
+				<div class="main-navigation navigation-top">
+					<ul>
+	<li><a href="../index.html">Index</a></li>
+	<li><a href="../hierarchy.html">Hierarchy</a></li>
+</ul>
+				</div>
+				<div id="header">
+					<div class="section-header">
+						<h1 class="title title-header">ESTBeacon Class Reference</h1>
+					</div>		
+				</div>
+				<div id="container">	
+					
+					<div class="section section-specification"><table cellspacing="0"><tbody>
+						<tr>
+	<td class="specification-title">Inherits from</td>
+	<td class="specification-value">NSObject</td>
+</tr><tr>
+	<td class="specification-title">Declared in</td>
+	<td class="specification-value">ESTBeacon.h<br />ESTBeacon.m</td>
+</tr>
+						</tbody></table></div>
+					
+                    
+                    
+					
+					<div class="section section-overview">
+						<a title="Overview" name="overview"></a>
+						<h2 class="subtitle subtitle-overview">Overview</h2>
+						<p>The ESTBeacon class represents a beacon that was encountered during region monitoring. You do not create instances of this class directly. The location manager object reports encountered beacons to its associated delegate object. You can use the information in a beacon object to identify which beacon was encountered.</p>
+
+<p>ESTBeacon class contains basic Apple CLBeacon object reference as well as some additional functionality. It allows to  connect with Estimote beacon to read / write its characteristics like Advertised params.</p>
+					</div>
+					
+					
+					
+					
+					
+					<div class="section section-tasks">
+						<a title="Tasks" name="tasks"></a>
+						<h2 class="subtitle subtitle-tasks">Tasks</h2>
+						
+						
+						
+						
+
+						<ul class="task-list">
+							<li>
+	<span class="tooltip">
+		<code><a href="#//api/name/connectToBeacon">&ndash;&nbsp;connectToBeacon</a></code>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/disconnectBeacon">&ndash;&nbsp;disconnectBeacon</a></code>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/readBeaconMajorWithCompletition:">&ndash;&nbsp;readBeaconMajorWithCompletition:</a></code>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/readBeaconMinorWithCompletition:">&ndash;&nbsp;readBeaconMinorWithCompletition:</a></code>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/readBeaconFrequencyWithCompletition:">&ndash;&nbsp;readBeaconFrequencyWithCompletition:</a></code>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/readBeaconPowerWithCompletition:">&ndash;&nbsp;readBeaconPowerWithCompletition:</a></code>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/readBeaconBatteryWithCompletition:">&ndash;&nbsp;readBeaconBatteryWithCompletition:</a></code>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/readBeaconFirmwareVersionWithCompletition:">&ndash;&nbsp;readBeaconFirmwareVersionWithCompletition:</a></code>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/readBeaconHardwareVersionWithCompletition:">&ndash;&nbsp;readBeaconHardwareVersionWithCompletition:</a></code>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/writeBeaconMajor:withCompletition:">&ndash;&nbsp;writeBeaconMajor:withCompletition:</a></code>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/writeBeaconMinor:withCompletition:">&ndash;&nbsp;writeBeaconMinor:withCompletition:</a></code>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/writeBeaconFrequency:withCompletition:">&ndash;&nbsp;writeBeaconFrequency:withCompletition:</a></code>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/writeBeaconPower:withCompletition:">&ndash;&nbsp;writeBeaconPower:withCompletition:</a></code>
+	</span>
+	
+	
+</li>
+						</ul>
+						
+					</div>
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					<div class="section section-methods">
+						<a title="Instance Methods" name="instance_methods"></a>
+						<h2 class="subtitle subtitle-methods">Instance Methods</h2>
+						
+						<div class="section-method">
+	<a name="//api/name/connectToBeacon" title="connectToBeacon"></a>
+	<h3 class="subsubtitle method-title">connectToBeacon</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Connect device to particular beacon</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (void)connectToBeacon</code></div>
+
+    
+	
+	
+	
+	<div class="method-subsection return">
+		<h4 class="method-subtitle parameter-title">Return Value</h4>
+		<p>void</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">ESTBeacon.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/disconnectBeacon" title="disconnectBeacon"></a>
+	<h3 class="subsubtitle method-title">disconnectBeacon</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Disconnect device with particular beacon</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (void)disconnectBeacon</code></div>
+
+    
+	
+	
+	
+	<div class="method-subsection return">
+		<h4 class="method-subtitle parameter-title">Return Value</h4>
+		<p>void</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">ESTBeacon.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/readBeaconBatteryWithCompletition:" title="readBeaconBatteryWithCompletition:"></a>
+	<h3 class="subsubtitle method-title">readBeaconBatteryWithCompletition:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Read battery level of connected beacon</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (void)readBeaconBatteryWithCompletition:(ESTUnsignedCompletitionBlock)<em>completition</em></code></div>
+
+    
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>completition</em></dt>
+			<dd><p>Block handling operation completition</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	<div class="method-subsection return">
+		<h4 class="method-subtitle parameter-title">Return Value</h4>
+		<p>void</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">ESTBeacon.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/readBeaconFirmwareVersionWithCompletition:" title="readBeaconFirmwareVersionWithCompletition:"></a>
+	<h3 class="subsubtitle method-title">readBeaconFirmwareVersionWithCompletition:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Read firmware version of connected beacon</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (void)readBeaconFirmwareVersionWithCompletition:(ESTStringCompletitionBlock)<em>completition</em></code></div>
+
+    
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>completition</em></dt>
+			<dd><p>Block handling operation completition</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	<div class="method-subsection return">
+		<h4 class="method-subtitle parameter-title">Return Value</h4>
+		<p>void</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">ESTBeacon.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/readBeaconFrequencyWithCompletition:" title="readBeaconFrequencyWithCompletition:"></a>
+	<h3 class="subsubtitle method-title">readBeaconFrequencyWithCompletition:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Read frequency and minor of connected beacon</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (void)readBeaconFrequencyWithCompletition:(ESTUnsignedCompletitionBlock)<em>completition</em></code></div>
+
+    
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>completition</em></dt>
+			<dd><p>Block handling operation completition</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	<div class="method-subsection return">
+		<h4 class="method-subtitle parameter-title">Return Value</h4>
+		<p>void</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">ESTBeacon.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/readBeaconHardwareVersionWithCompletition:" title="readBeaconHardwareVersionWithCompletition:"></a>
+	<h3 class="subsubtitle method-title">readBeaconHardwareVersionWithCompletition:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Read hardware version of connected beacon</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (void)readBeaconHardwareVersionWithCompletition:(ESTStringCompletitionBlock)<em>completition</em></code></div>
+
+    
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>completition</em></dt>
+			<dd><p>Block handling operation completition</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	<div class="method-subsection return">
+		<h4 class="method-subtitle parameter-title">Return Value</h4>
+		<p>void</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">ESTBeacon.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/readBeaconMajorWithCompletition:" title="readBeaconMajorWithCompletition:"></a>
+	<h3 class="subsubtitle method-title">readBeaconMajorWithCompletition:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Read major of connected beacon</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (void)readBeaconMajorWithCompletition:(ESTUnsignedCompletitionBlock)<em>completition</em></code></div>
+
+    
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>completition</em></dt>
+			<dd><p>Block handling operation completition</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	<div class="method-subsection return">
+		<h4 class="method-subtitle parameter-title">Return Value</h4>
+		<p>Point Major and Minor points</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">ESTBeacon.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/readBeaconMinorWithCompletition:" title="readBeaconMinorWithCompletition:"></a>
+	<h3 class="subsubtitle method-title">readBeaconMinorWithCompletition:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Read minor of connected beacon</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (void)readBeaconMinorWithCompletition:(ESTUnsignedCompletitionBlock)<em>completition</em></code></div>
+
+    
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>completition</em></dt>
+			<dd><p>Block handling operation completition</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	<div class="method-subsection return">
+		<h4 class="method-subtitle parameter-title">Return Value</h4>
+		<p>Point Major and Minor points</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">ESTBeacon.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/readBeaconPowerWithCompletition:" title="readBeaconPowerWithCompletition:"></a>
+	<h3 class="subsubtitle method-title">readBeaconPowerWithCompletition:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Read power of connected beacon</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (void)readBeaconPowerWithCompletition:(ESTUnsignedCompletitionBlock)<em>completition</em></code></div>
+
+    
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>completition</em></dt>
+			<dd><p>Block handling operation completition</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	<div class="method-subsection return">
+		<h4 class="method-subtitle parameter-title">Return Value</h4>
+		<p>float value of beacon power</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">ESTBeacon.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/writeBeaconFrequency:withCompletition:" title="writeBeaconFrequency:withCompletition:"></a>
+	<h3 class="subsubtitle method-title">writeBeaconFrequency:withCompletition:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Write frequency of connected beacon.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (void)writeBeaconFrequency:(short)<em>frequency</em> withCompletition:(ESTUnsignedCompletitionBlock)<em>completition</em></code></div>
+
+    
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>frequency</em></dt>
+			<dd><p>advertising beacon frequency</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>completition</em></dt>
+			<dd><p>Block handling operation completition</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	<div class="method-subsection return">
+		<h4 class="method-subtitle parameter-title">Return Value</h4>
+		<p>void</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">ESTBeacon.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/writeBeaconMajor:withCompletition:" title="writeBeaconMajor:withCompletition:"></a>
+	<h3 class="subsubtitle method-title">writeBeaconMajor:withCompletition:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Write major param of connected beacon.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (void)writeBeaconMajor:(short)<em>major</em> withCompletition:(ESTUnsignedCompletitionBlock)<em>completition</em></code></div>
+
+    
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>major</em></dt>
+			<dd><p>major beacon value</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>completition</em></dt>
+			<dd><p>Block handling operation completition</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	<div class="method-subsection return">
+		<h4 class="method-subtitle parameter-title">Return Value</h4>
+		<p>void</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">ESTBeacon.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/writeBeaconMinor:withCompletition:" title="writeBeaconMinor:withCompletition:"></a>
+	<h3 class="subsubtitle method-title">writeBeaconMinor:withCompletition:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Write minor param of connected beacon.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (void)writeBeaconMinor:(short)<em>minor</em> withCompletition:(ESTUnsignedCompletitionBlock)<em>completition</em></code></div>
+
+    
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>minor</em></dt>
+			<dd><p>minor beacon value</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>completition</em></dt>
+			<dd><p>Block handling operation completition</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	<div class="method-subsection return">
+		<h4 class="method-subtitle parameter-title">Return Value</h4>
+		<p>void</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">ESTBeacon.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/writeBeaconPower:withCompletition:" title="writeBeaconPower:withCompletition:"></a>
+	<h3 class="subsubtitle method-title">writeBeaconPower:withCompletition:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Write power of connected beacon.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (void)writeBeaconPower:(ESTBeaconPower)<em>power</em> withCompletition:(ESTUnsignedCompletitionBlock)<em>completition</em></code></div>
+
+    
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>power</em></dt>
+			<dd><p>advertising beacon power</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>completition</em></dt>
+			<dd><p>Block handling operation completition</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	<div class="method-subsection return">
+		<h4 class="method-subtitle parameter-title">Return Value</h4>
+		<p>void</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">ESTBeacon.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+					</div>
+					
+					
+                    
+                    
+				</div>
+				<div class="main-navigation navigation-bottom">
+					<ul>
+	<li><a href="../index.html">Index</a></li>
+	<li><a href="../hierarchy.html">Hierarchy</a></li>
+</ul>
+				</div>
+				<div id="footer">
+					<hr />
+					<div class="footer-copyright">
+						<p><span class="copyright">&copy; 2013 Estimote. All rights reserved. (Last updated: 2013-09-27)</span><br />
+						
+						<span class="generator">Generated by <a href="http://appledoc.gentlebytes.com">appledoc 2.2 (build 961)</a>.</span></p>
+						
+					</div>
+				</div>
+			</div>
+		</article>
+		<script type="text/javascript">
+			function jumpToChange()
+			{
+				window.location.hash = this.options[this.selectedIndex].value;
+			}
+			
+			function toggleTOC()
+			{
+				var contents = document.getElementById('contents');
+				var tocContainer = document.getElementById('tocContainer');
+				
+				if (this.getAttribute('class') == 'open')
+				{
+					this.setAttribute('class', '');
+					contents.setAttribute('class', '');
+					tocContainer.setAttribute('class', '');
+					
+					window.name = "hideTOC";
+				}
+				else
+				{
+					this.setAttribute('class', 'open');
+					contents.setAttribute('class', 'isShowingTOC');
+					tocContainer.setAttribute('class', 'isShowingTOC');
+					
+					window.name = "";
+				}
+				return false;
+			}
+			
+			function toggleTOCEntryChildren(e)
+			{
+				e.stopPropagation();
+				var currentClass = this.getAttribute('class');
+				if (currentClass == 'children') {
+					this.setAttribute('class', 'children open');
+				}
+				else if (currentClass == 'children open') {
+					this.setAttribute('class', 'children');
+				}
+				return false;
+			}
+			
+			function tocEntryClick(e)
+			{
+				e.stopPropagation();
+				return true;
+			}
+			
+			function init()
+			{
+				var selectElement = document.getElementById('jumpTo');
+				selectElement.addEventListener('change', jumpToChange, false);
+				
+				var tocButton = document.getElementById('table_of_contents');
+				tocButton.addEventListener('click', toggleTOC, false);
+				
+				var taskTreeItem = document.getElementById('task_treeitem');
+				if (taskTreeItem.getElementsByTagName('li').length > 0)
+				{
+					taskTreeItem.setAttribute('class', 'children');
+					taskTreeItem.firstChild.setAttribute('class', 'disclosure');
+				}
+				
+				var tocList = document.getElementById('toc');
+				
+				var tocEntries = tocList.getElementsByTagName('li');
+				for (var i = 0; i < tocEntries.length; i++) {
+					tocEntries[i].addEventListener('click', toggleTOCEntryChildren, false);
+				}
+				
+				var tocLinks = tocList.getElementsByTagName('a');
+				for (var i = 0; i < tocLinks.length; i++) {
+					tocLinks[i].addEventListener('click', tocEntryClick, false);
+				}
+				
+				if (window.name == "hideTOC") {
+					toggleTOC.call(tocButton);
+				}
+			}
+			
+			window.onload = init;
+			
+			// If showing in Xcode, hide the TOC and Header
+			if (navigator.userAgent.match(/xcode/i)) {
+				document.getElementById("contents").className = "hideInXcode"
+				document.getElementById("tocContainer").className = "hideInXcode"
+				document.getElementById("top_header").className = "hideInXcode"
+			}
+			
+		</script>
+	</body>
+</html>
