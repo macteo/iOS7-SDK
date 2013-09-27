@@ -47,7 +47,7 @@
 	
 	<option value="//api/name/beaconConnectionDidSucceeded">&nbsp;&nbsp;&nbsp;&nbsp;- beaconConnectionDidSucceeded</option>
 	
-	<option value="//api/name/beaconDidDisconnectWith">&nbsp;&nbsp;&nbsp;&nbsp;- beaconDidDisconnectWith</option>
+	<option value="//api/name/beaconDidDisconnectWithError:">&nbsp;&nbsp;&nbsp;&nbsp;- beaconDidDisconnectWithError:</option>
 	
 	
 	
@@ -81,7 +81,7 @@
 	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/beaconConnectionDidSucceeded">beaconConnectionDidSucceeded</a></span></li>
 	
-	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/beaconDidDisconnectWith">beaconDidDisconnectWith</a></span></li>
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/beaconDidDisconnectWithError:">beaconDidDisconnectWithError:</a></span></li>
 	
 </ul></li>
 
@@ -150,7 +150,7 @@
 	
 </li><li>
 	<span class="tooltip">
-		<code><a href="#//api/name/beaconDidDisconnectWith">&ndash;&nbsp;beaconDidDisconnectWith</a></code>
+		<code><a href="#//api/name/beaconDidDisconnectWithError:">&ndash;&nbsp;beaconDidDisconnectWithError:</a></code>
 	</span>
 	
 	
@@ -264,8 +264,8 @@
 </div>
 						
 						<div class="section-method">
-	<a name="//api/name/beaconDidDisconnectWith" title="beaconDidDisconnectWith"></a>
-	<h3 class="subsubtitle method-title">beaconDidDisconnectWith</h3>
+	<a name="//api/name/beaconDidDisconnectWithError:" title="beaconDidDisconnectWithError:"></a>
+	<h3 class="subsubtitle method-title">beaconDidDisconnectWithError:</h3>
 	
 	
 	
@@ -275,9 +275,19 @@
 	
     
 
-	<div class="method-subsection method-declaration"><code>- (void)beaconDidDisconnectWith</code></div>
+	<div class="method-subsection method-declaration"><code>- (void)beaconDidDisconnectWithError:(NSError *)<em>error</em></code></div>
 
     
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>error</em></dt>
+			<dd><p>information about reason of error</p></dd>
+		</dl>
+		
+	</div>
 	
 	
 	
