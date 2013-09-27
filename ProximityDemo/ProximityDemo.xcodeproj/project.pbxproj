@@ -400,12 +400,12 @@
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
 					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
-					"/Users/mklimek/Projects/estimote/ios_code/iOS7-SDK/EstimoteSDK/Headers",
+					"$(SRCROOT)/../EstimoteSDK/Headers",
 				);
 				INFOPLIST_FILE = "ProximityDemo/ProximityDemo-Info.plist";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
-					"/Users/mklimek/Projects/estimote/ios_code/iOS7-SDK/EstimoteSDK",
+					"$(SRCROOT)/../EstimoteSDK",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
@@ -422,12 +422,12 @@
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
 					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
-					"/Users/mklimek/Projects/estimote/ios_code/iOS7-SDK/EstimoteSDK/Headers",
+					"$(SRCROOT)/../EstimoteSDK/Headers",
 				);
 				INFOPLIST_FILE = "ProximityDemo/ProximityDemo-Info.plist";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
-					"/Users/mklimek/Projects/estimote/ios_code/iOS7-SDK/EstimoteSDK",
+					"$(SRCROOT)/../EstimoteSDK",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
