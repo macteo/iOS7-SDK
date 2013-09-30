@@ -28,11 +28,10 @@
 {
     [super viewDidLoad];
 
-    
     /////////////////////////////////////////////////////////////
     // setup Estimote beacon manager
     
-    // craete manager instance
+    // create manager instance
     self.beaconManager = [[ESTBeaconManager alloc] init];
     self.beaconManager.delegate = self;
     self.beaconManager.avoidUnknownStateBeacons = YES;
@@ -45,28 +44,30 @@
     [self.beaconManager startRangingBeaconsInRegion:region];
     
     
-    
     /////////////////////////////////////////////////////////////
-    // setup view
+    // setup Estimote beacon manager
     
-    // background
+    [self setupView];
+}
+
+-(void)setupView
+{
+    /////////////////////////////////////////////////////////////
+    // setup background image
     
     CGRect          screenRect          = [[UIScreen mainScreen] bounds];
     CGFloat         screenHeight        = screenRect.size.height;
     UIImageView*    backgroundImage;
     
     if (screenHeight > 480)
-    {
         backgroundImage = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"backgroundBig"]];
-    }
     else
-    {
         backgroundImage = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"backgroundSmall"]];
-    }
     
     [self.view addSubview:backgroundImage];
     
-    // position dot
+    /////////////////////////////////////////////////////////////
+    // setup dot image
     
     self.positionDot = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"dotImage"]];
     [self.positionDot setCenter:self.view.center];
