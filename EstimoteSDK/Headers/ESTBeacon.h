@@ -15,12 +15,40 @@
 // Estimote beacon delegate protocol
 
 
+/**
+ 
+ ESTBeaconDelegate defines beacon connection delegate mathods. Connection is asynchronous operation so you need to be prepared that eg. beaconDidDisconnectWith: method can be invoked without previous action.
+ 
+ */
+
 @protocol ESTBeaconDelegate <NSObject>
 
 @optional
+
+/**
+ * Delegate method that indicates error in beacon connection.
+ *
+ * @param error information about reason of error
+ *
+ * @return void
+ */
 - (void)beaconConnectionDidFail:(NSError*)error;
+
+/**
+ * Delegate method that indicates success in beacon connection.
+ *
+ * @return void
+ */
 - (void)beaconConnectionDidSucceeded;
-- (void)beaconDidDisconnect;
+
+/**
+ * Delegate method that beacon did disconnect with device.
+ *
+  * @param error information about reason of error
+ *
+ * @return void
+ */
+- (void)beaconDidDisconnectWithError:(NSError*)error;
 
 @end
 
@@ -28,13 +56,22 @@
 ////////////////////////////////////////////////////////////////////
 // Interface definition
 
+/**
+ 
+ The ESTBeacon class represents a beacon that was encountered during region monitoring. You do not create instances of this class directly. The ESTBeaconManager object reports encountered beacons to its associated delegate object. You can use the information in a beacon object to identify which beacon was encountered.
+ 
+ 
+ESTBeacon class contains basic Apple CLBeacon object reference as well as some additional functionality. It allows to  connect with Estimote beacon to read / write its characteristics.
+ 
+ */
 
 @interface ESTBeacon : NSObject
 
 @property (nonatomic)           ESTBeaconFirmwareState  firmwareState;
+@property (nonatomic)           id <ESTBeaconDelegate>  delegate;
 
 /////////////////////////////////////////////////////
-// bluetooth properties available when used with
+// bluetooth beacon available when used with
 // startEstimoteBeaconsDiscoveryForRegion:
 
 @property (nonatomic, strong)   CBPeripheral*           peripheral;
@@ -45,6 +82,16 @@
 @property (nonatomic, strong)   NSNumber*               rssi;
 
 /////////////////////////////////////////////////////
+// properties filled when read characteristic
+
+@property (nonatomic, strong)   NSNumber*               power;
+@property (nonatomic, strong)   NSNumber*               frequency;
+@property (nonatomic, strong)   NSNumber*               baterryLevel;
+
+@property (nonatomic, strong)   NSString*               hardwareVersion;
+@property (nonatomic, strong)   NSString*               firmwareVersion;
+
+/////////////////////////////////////////////////////
 // core location properties
 
 @property (nonatomic, strong)   CLBeacon*               ibeacon;
@@ -53,20 +100,16 @@
 /**
  * Connect device to particular beacon
  *
- * @param completition Block handling operation completition
- *
  * @return void
  */
--(void)connectToBeaconWithCompletition:(ESTCompletitionBlock)completition;
+-(void)connectToBeacon;
 
 /**
  * Disconnect device with particular beacon
  *
- * @param completition Block handling operation completition
- *
  * @return void
  */
--(void)disconnectBeaconWithCompletition:(ESTCompletitionBlock)completition;
+-(void)disconnectBeacon;
 
 /**
  * Read major of connected beacon
@@ -80,7 +123,7 @@
 /**
  * Read minor of connected beacon
  *
- * @param completition Block handling operation completition
+ * @param completition block handling operation completition
  *
  * @return Point Major and Minor points
  */
@@ -89,7 +132,7 @@
 /**
  * Read frequency and minor of connected beacon
  *
- * @param completition Block handling operation completition
+ * @param completition block handling operation completition
  *
  * @return void
  */
@@ -99,7 +142,7 @@
 /**
  * Read power of connected beacon
  *
- * @param completition Block handling operation completition
+ * @param completition block handling operation completition
  *
  * @return float value of beacon power
  */
@@ -108,7 +151,7 @@
 /**
  * Read battery level of connected beacon
  *
- * @param completition Block handling operation completition
+ * @param completition block handling operation completition
  *
  * @return void
  */
@@ -126,7 +169,7 @@
 /**
  * Read hardware version of connected beacon
  *
- * @param completition Block handling operation completition
+ * @param completition block handling operation completition
  *
  * @return void
  */
@@ -136,7 +179,8 @@
 /**
  * Write major param of connected beacon.
  *
- * @param completition Block handling operation completition
+ * @param major major beacon value
+ * @param completition block handling operation completition
  *
  * @return void
  */
@@ -145,7 +189,8 @@
 /**
  * Write minor param of connected beacon.
  *
- * @param completition Block handling operation completition
+ * @param minor minor beacon value
+ * @param completition block handling operation completition
  *
  * @return void
  */
@@ -154,7 +199,8 @@
 /**
  * Write frequency of connected beacon.
  *
- * @param completition Block handling operation completition
+ * @param frequency advertising beacon frequency
+ * @param completition block handling operation completition
  *
  * @return void
  */
@@ -164,21 +210,13 @@
 /**
  * Write power of connected beacon.
  *
- * @param completition Block handling operation completition
+ * @param power advertising beacon power
+ * @param completition block handling operation completition
  *
  * @return void
  */
 - (void)writeBeaconPower:(ESTBeaconPower)power withCompletition:(ESTUnsignedCompletitionBlock)completition;
 
-
-/**
- * Check if firmware update is available for this beacon.
- *
- * @param completition Block handling operation completition
- *
- * @return void
- */
--(void)checkFirmwareUpdateWithCompletition:(ESTBoolCompletitionBlock)completition;
 
 /**
  * Update firmware of connected beacon.
@@ -187,6 +225,7 @@
  *
  * @return void
  */
--(void)updateBeaconFirmwareWithCompletition:(ESTCompletitionBlock)completition;
+-(void)updateBeaconFirmwareWithProgress:(ESTStringCompletitionBlock)progress
+                        andCompletition:(ESTCompletitionBlock)completition;
 
 @end

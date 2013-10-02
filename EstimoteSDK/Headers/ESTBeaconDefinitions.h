@@ -29,12 +29,15 @@ typedef enum : char
     ESTBeaconPowerLevel8 = 4
 } ESTBeaconPower;
 
-typedef enum
+typedef enum : int
 {
     ESTBeaconFirmwareStateBoot,
     ESTBeaconFirmwareStateApp
 } ESTBeaconFirmwareState;
 
+
+////////////////////////////////////////////////////////////////////
+// Interface definition
 
 @interface ESTBeaconDefinitions : NSObject
 
