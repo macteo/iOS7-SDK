@@ -29,7 +29,7 @@ Follow steps described below to install EstimoteSDK library:
 
   When you add them your project settings should look like on the screenshot below.
 
-  ![ScreenShot LinkWithBinaryLibraries](http://estimote.com/api/CoreBluetoothScreenShot.png)
+  ![ScreenShot LinkWithBinaryLibraries](http://estimote.com/api/BuildPhasesScreenshot.png)
 
 3. Go to Build Settings section of project settings and search for Header Search Path. Add line containg "$(SRCROOT)/../EstimoteSDK/Headers".
 
