@@ -97,6 +97,9 @@ ESTBeacon class contains basic Apple CLBeacon object reference as well as some a
 @property (nonatomic, strong)   CLBeacon*               ibeacon;
 
 
+@property (nonatomic, readonly)   BOOL                  isConnected;
+
+
 /**
  * Connect device to particular beacon
  *
