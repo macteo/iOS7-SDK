@@ -2,6 +2,7 @@
 //  ESTBeaconRegion.h
 //  EstimotePrivSDK7
 //
+//  Version : 1.0.0
 //  Created by Marcin Klimek on 9/21/13.
 //  Copyright (c) 2013 Estimote. All rights reserved.
 //
