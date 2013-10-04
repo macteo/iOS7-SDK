@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name         = "EstimoteSDK"
-  s.version      = "0.1.2"
+  s.version      = "0.1.3"
   s.summary      = "Estimote SDK is a wrapper around Apple's CoreLocation framework."
 
   s.description  = <<-DESC
@@ -11,15 +11,15 @@ Pod::Spec.new do |s|
   s.license      = 'MIT'
   s.author       = 'martinklimek', 'ljdk'
   s.platform     = :ios, '7.0'
-  s.source       = { :git => "https://github.com/macteo/iOS7-SDK.git", :tag => "0.1.2" }
+  s.source       = { :git => "https://github.com/macteo/iOS7-SDK.git", :tag => "0.1.3" }
 
-  s.public_header_files = 'Headers/*.h'
+  s.public_header_files = 'EstimoteSDK/Headers/*.h'
+
   s.frameworks = 'CoreBluetooth', 'SystemConfiguration', 'CoreLocation'
-
-  # s.resource   = 'libEstimoteSDK7.a'
+  
   s.library    = 'EstimoteSDK7'
   s.xcconfig        =  { 'LIBRARY_SEARCH_PATHS' => '$(PODS_ROOT)/EstimoteSDK' }
-  s.preserve_paths  = 'EstimoteSDK7.a'
+  s.preserve_paths  = 'EstimoteSDK/libEstimoteSDK7.a'
   
   s.requires_arc = true
 end
