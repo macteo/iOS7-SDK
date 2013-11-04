@@ -1,6 +1,5 @@
-EstimoteSDK for iOS 7
-=======
-
+EstimoteSDK was moved!
+---------
 Overview
 -------
 
@@ -35,3 +34,5 @@ Follow steps described below to install EstimoteSDK library:
 
 4. Congratulations! You are done.
  
+=======
+You can find it here: https://github.com/Estimote/iOS-SDK
